@@ -24,15 +24,19 @@ const Hero = () => {
               Finde neue spannende Bücher von Leuten aus deiner Nachbarschaft
             </h3>
           </HeroText>
-          <BounceBtn>Jetzt registrieren</BounceBtn>
-          <Link
-            style={{ display: "grid", placeItems: "center" }}
-            to={links[0].url}
-          >
+          <BounceBtn>
+            <a
+              style={{ color: "var(--bckgrnd-clr)" }}
+              href="http://buecherregal.herokuapp.com"
+            >
+              Jetzt registrieren
+            </a>
+          </BounceBtn>
+          <StyledLink to={links[0].url}>
             <ScrollDownIcon>
               <FaAngleDoubleDown />
             </ScrollDownIcon>
-          </Link>
+          </StyledLink>
         </HeroContainer>
       </HeroSection>
     </>
@@ -133,6 +137,12 @@ const ScrollDownIcon = styled.span`
   bottom: 1rem;
   cursor: pointer;
   animation: ${jump} 2s ease-in infinite;
+`
+
+const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export default Hero

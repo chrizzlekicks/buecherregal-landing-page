@@ -1,8 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+const query = graphql`
+  {
+    allFile(sort: { fields: name }) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(width: 300, height: 300, placeholder: BLURRED)
+        }
+        name
+      }
+    }
+  }
+`
 
 const About = () => {
+  const data = useStaticQuery(query)
+  const nodes = data.allFile.nodes
+
   return (
     <AboutSection id="about">
       <Container>
@@ -16,66 +33,22 @@ const About = () => {
         </p>
       </Container>
       <TeamArea>
-        <TeamMember>
-          <StaticImage
-            src="../assets/images/lena.png"
-            alt="Lena"
-            placeholder="blurred"
-            className="team-img"
-            width={300}
-            height={300}
-            as="span"
-          />
-          <MemberInfo>
-            <h4>Lena</h4>
-            <p>Product | UX</p>
-          </MemberInfo>
-        </TeamMember>
-        <TeamMember>
-          <StaticImage
-            src="../assets/images/max.jpeg"
-            alt="Max"
-            placeholder="blurred"
-            className="team-img"
-            width={300}
-            height={300}
-            as="span"
-          />
-          <MemberInfo>
-            <h4>Max</h4>
-            <p>Product | Marketing</p>
-          </MemberInfo>
-        </TeamMember>
-        <TeamMember>
-          <StaticImage
-            src="../assets/images/chrizzle.jpeg"
-            alt="Chris"
-            placeholder="blurred"
-            className="team-img"
-            width={300}
-            height={300}
-            as="span"
-          />
-          <MemberInfo>
-            <h4>Chris</h4>
-            <p>Tech | Frontend</p>
-          </MemberInfo>
-        </TeamMember>
-        <TeamMember>
-          <StaticImage
-            src="../assets/images/mikrofon_johannes.png"
-            alt="Johannes"
-            placeholder="blurred"
-            className="team-img"
-            width={300}
-            height={300}
-            as="span"
-          />
-          <MemberInfo>
-            <h4>Johannes</h4>
-            <p>Tech | Backend</p>
-          </MemberInfo>
-        </TeamMember>
+        {nodes.map((image, index) => {
+          const { name } = image
+          const pathToImage = getImage(image)
+          return (
+            <TeamMember key={index}>
+              <GatsbyImage
+                image={pathToImage}
+                alt={name}
+                className="team-img"
+              />
+              <MemberInfo>
+                <h4>{name}</h4>
+              </MemberInfo>
+            </TeamMember>
+          )
+        })}
       </TeamArea>
     </AboutSection>
   )
@@ -126,6 +99,7 @@ const MemberInfo = styled.header`
   h4 {
     color: var(--brnd-clr);
     margin-bottom: 0.5rem;
+    text-transform: capitalize;
   }
 `
 

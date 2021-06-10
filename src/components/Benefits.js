@@ -7,7 +7,7 @@ const Benefits = () => {
     <BenefitSection id="benefits">
       <GridContainer>
         <Article>
-          <Title>Bereichere andere um Dich herum. Karma is on your side.</Title>
+          <h2>Bereichere andere um Dich herum. Karma is on your side.</h2>
           <BenefitContainer>
             <GridItem>
               <CircledNumber>1</CircledNumber>
@@ -55,13 +55,13 @@ const Article = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; ;
-`
+  align-items: center;
 
-const Title = styled.h2`
-  text-align: left;
-  padding: 2rem 3rem;
-  color: var(--bckgrnd-clr);
+  h2 {
+    text-align: left;
+    padding: 2rem 3rem;
+    color: var(--bckgrnd-clr);
+  }
 `
 
 const BenefitContainer = styled.aside`
