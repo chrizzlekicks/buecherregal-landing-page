@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `Bücherregal`,
     siteUrl: `https://buecherregal.netlify.app`,
-    description: `Die dezentrale Bib in Deiner Hood`,
+    description: `Die digitale Bib in Deiner Hood`,
   },
   flags: {
     DEV_SSR: false,
