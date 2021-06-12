@@ -28,8 +28,9 @@ const About = () => {
           Das Projekt "Bücherregal" ist im Rahmen von{" "}
           <a href="https://techlabs.org">TechLabs</a> entstanden. Wir wollen
           einen barrierefreien Zugang zu Unterhaltung und Wissen schaffen und
-          einen regen Austausch unter den Menschen wieder befeuern. Von daher
-          arbeiten wir emsig an einem digitalen und dezentralen Bücherregal.
+          einen regen Austausch unter den Menschen befeuern. Aus diesem Grund
+          arbeiten wir emsig an einer digitalen Plattform, die das Verleihen von
+          Büchern vereinfachen soll.
         </p>
       </Container>
       <TeamArea>
@@ -41,7 +42,9 @@ const About = () => {
               <GatsbyImage
                 image={pathToImage}
                 alt={name}
-                className="team-img"
+                width={200}
+                height={200}
+                imgClassName="team-img"
               />
               <MemberInfo>
                 <h4>{name}</h4>
@@ -55,18 +58,22 @@ const About = () => {
 }
 
 const AboutSection = styled.section`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   display: grid;
   place-items: center;
+  padding-top: 80px;
 `
 
 const Container = styled.div`
-  width: 75vw;
   max-width: var(--mx-wdth);
   text-align: center;
   position: relative;
-  top: 4rem;
+  padding: 1rem;
+
+  @media (min-width: 800px) {
+    width: 75vw;
+  }
 `
 
 const Title = styled.h2`
@@ -75,17 +82,26 @@ const Title = styled.h2`
 
 const TeamArea = styled.div`
   position: relative;
-  top: 2rem;
   max-width: var(--mx-wdth);
   width: 100%;
+  height: auto;
+  padding: 0.5rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    padding: 1rem;
+  }
 `
 
 const TeamMember = styled.article`
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
 
   .team-img {
     border-radius: 50%;
@@ -94,12 +110,16 @@ const TeamMember = styled.article`
 
 const MemberInfo = styled.header`
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 
   h4 {
     color: var(--brnd-clr);
     margin-bottom: 0.5rem;
     text-transform: capitalize;
+  }
+
+  @media (min-width: 800px) {
+    padding: 2rem;
   }
 `
 

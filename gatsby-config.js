@@ -6,6 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Bücherregal",
+    siteurl: "https://buecherregal.netlify.app",
+    description: "Die dezentrale Bib in Deiner Hood",
+  },
   flags: {
     DEV_SSR: false,
   },

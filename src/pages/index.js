@@ -4,16 +4,16 @@ import Hero from "../components/Hero"
 import HowTo from "../components/HowTo"
 import About from "../components/About"
 import Benefits from "../components/Benefits"
-import Wavy from "../components/Wavy"
+import CallToAction from "../components/CallToAction"
 
 const Home = () => {
   return (
     <Layout>
       <Hero />
       <HowTo />
-      <Wavy />
       <Benefits />
       <About />
+      <CallToAction />
     </Layout>
   )
 }

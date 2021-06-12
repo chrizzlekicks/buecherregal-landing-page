@@ -24,14 +24,14 @@ const Hero = () => {
               Finde neue spannende Bücher von Leuten aus deiner Nachbarschaft
             </h3>
           </HeroText>
-          <BounceBtn>
+          <ActionBtn>
             <a
               style={{ color: "var(--bckgrnd-clr)" }}
               href="http://buecherregal.herokuapp.com"
             >
               Jetzt registrieren
             </a>
-          </BounceBtn>
+          </ActionBtn>
           <StyledLink to={links[0].url}>
             <ScrollDownIcon>
               <FaAngleDoubleDown />
@@ -44,7 +44,7 @@ const Hero = () => {
 }
 
 const HeroSection = styled.section`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
   margin: 0 auto;
@@ -68,21 +68,10 @@ const HeroContainer = styled.div`
 const HeroText = styled.div`
   text-align: center;
   color: #fff;
+  margin-bottom: 1rem;
 `
 
-const bounce = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-`
-
-const BounceBtn = styled.button`
+const ActionBtn = styled.button`
   background: var(--brnd-clr);
   border: 2px solid var(--brnd-clr);
   border-radius: var(--brdr-rds);
@@ -91,7 +80,6 @@ const BounceBtn = styled.button`
   margin: 0.25rem 0;
   padding: 0.25rem 0.5rem;
   transition: var(--trnstn);
-  animation: ${bounce} 2s ease-in-out infinite;
 
   &:hover {
     background: var(--fnt-clr);
@@ -105,21 +93,21 @@ const BounceBtn = styled.button`
 `
 
 const jump = keyframes`
-0% {
-  transform: translateY(0);
-}
+  0% {
+    transform: translateY(0);
+  }
 
-10% {
-  transform: translateY(20px);
-}
+  10% {
+    transform: translateY(20px);
+  }
 
-20% {
-  transform: translateY(0);
-}
+  20% {
+    transform: translateY(0);
+  }
 
-30% {
-  transform: translateY(20px);
-}
+  30% {
+    transform: translateY(20px);
+  }
 
 40% {
   transform: translateY(0);
@@ -127,8 +115,8 @@ const jump = keyframes`
 `
 
 const ScrollDownIcon = styled.span`
-  font-size: 3rem;
-  padding: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
   border: 0;
   background: transparent;
   color: var(--bckgrnd-clr);
@@ -137,6 +125,11 @@ const ScrollDownIcon = styled.span`
   bottom: 1rem;
   cursor: pointer;
   animation: ${jump} 2s ease-in infinite;
+
+  @media (min-width: 800px) {
+    font-size: 3rem;
+    padding: 1rem;
+  }
 `
 
 const StyledLink = styled(Link)`

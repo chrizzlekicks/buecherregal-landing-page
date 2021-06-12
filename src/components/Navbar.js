@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import logo from "../assets/images/buecherregal.svg"
+import logo_white from "../assets/images/buecherregal-weiss.svg"
 import { links } from "../utils/linksDB"
 import { FaBook, FaBookOpen } from "react-icons/fa"
 
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const stickyNav = () => {
-      if (window.scrollY > 220) {
+      if (window.scrollY > 50) {
         setNavbar(true)
       } else {
         setNavbar(false)
@@ -29,7 +30,11 @@ const Navbar = () => {
         <NavContent>
           <NavHeader>
             <StyledLink to="/">
-              <img src={logo} alt="logo buecherregal" />
+              {navbar ? (
+                <img src={logo} alt="logo buecherregal" />
+              ) : (
+                <img src={logo_white} alt="logo_weiss buecherregal" />
+              )}
             </StyledLink>
             <BookIcon onClick={() => setShowLinks(!showLinks)}>
               {showLinks ? <FaBookOpen /> : <FaBook />}
@@ -126,7 +131,7 @@ const BookIcon = styled.span`
 const NavMenu = styled.div`
   text-align: start;
   font-size: 1rem;
-  height: ${props => (props.showLinks ? "11rem" : "0")};
+  height: ${props => (props.showLinks ? "7rem" : "0")};
   padding: ${props => (props.showLinks ? "0 0.5rem" : "none")};
   overflow: hidden;
   transition: var(--trnstn);

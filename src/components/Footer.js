@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { SiNetlify } from "react-icons/si"
+import { FaHeart } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -20,7 +21,9 @@ const Footer = () => {
           <p>
             Hosted on <SiNetlify /> Netlify
           </p>
-          <p>#blacklivesmatter</p>
+          <p>
+            Coded with <FaHeart /> in Münster, Berlin und München
+          </p>
         </FooterContainer>
       </FooterSection>
     </>
@@ -28,7 +31,8 @@ const Footer = () => {
 }
 
 const FooterSection = styled.section`
-  width: 100vw;
+  width: 100%;
+  height: auto;
 `
 
 const WaveContainer = styled.svg`
@@ -40,7 +44,7 @@ const WaveContainer = styled.svg`
 
 const FooterContainer = styled.section`
   background: var(--sm-clr);
-  height: 8rem;
+  height: 6rem;
   position: relative;
   display: grid;
   place-items: center;

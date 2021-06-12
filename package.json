@@ -1,9 +1,12 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "buecherregal-landing-page",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "0BSD",
+  "contributors": [
+    "Chris Schimetschka <chris.schimetschka@gmail.com>"
+  ],
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

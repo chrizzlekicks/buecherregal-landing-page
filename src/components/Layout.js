@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
 
 html {
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 body {
@@ -71,7 +72,6 @@ ul {
 }
 
 a {
-  text-transform: capitalize;
   text-decoration: none;
   font-family: var(---fnt-fmly);
   font-size: var(--fnt-sz);
