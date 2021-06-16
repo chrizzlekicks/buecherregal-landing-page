@@ -62,7 +62,7 @@ const AboutSection = styled.section`
   height: auto;
   display: grid;
   place-items: center;
-  padding-top: 80px;
+  padding-top: 100px;
 `
 
 const Container = styled.div`
@@ -70,6 +70,10 @@ const Container = styled.div`
   text-align: center;
   position: relative;
   padding: 1rem;
+
+  a {
+    color: var(--brnd-clr);
+  }
 
   @media (min-width: 800px) {
     width: 75vw;

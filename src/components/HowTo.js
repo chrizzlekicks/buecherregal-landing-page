@@ -42,7 +42,7 @@ const HowToSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 100px;
 `
 
 const Container = styled.div`

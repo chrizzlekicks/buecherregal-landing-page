@@ -62,6 +62,11 @@ const BenefitSection = styled.section`
   display: grid;
   place-items: center;
   background: linear-gradient(to bottom, var(--brnd-clr), var(--bckgrnd-clr));
+  padding-top: 50px;
+
+  @media (min-width: 800px) {
+    padding-top: 0;
+  }
 `
 
 const GridContainer = styled.div`
@@ -76,7 +81,7 @@ const GridContainer = styled.div`
   @media (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
 
     .reading-svg {
       display: inline-block;

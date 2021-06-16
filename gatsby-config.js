@@ -7,9 +7,9 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Bücherregal`,
-    siteUrl: `https://buecherregal.netlify.app`,
-    description: `Die digitale Bib in Deiner Hood`,
+    title: "Bücherregal",
+    description: "Das digitale Bücherregal in Deiner Nachbarschaft.",
+    url: "https://buecherregal.netlify.app",
   },
   flags: {
     DEV_SSR: false,
@@ -25,6 +25,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
   ],
 }

@@ -24,12 +24,16 @@ const Navbar = () => {
     }
   })
 
+  const closeNavMenu = () => {
+    setShowLinks(false)
+  }
+
   return (
     <>
       <Nav navbar={navbar}>
         <NavContent>
           <NavHeader>
-            <StyledLink to="/">
+            <StyledLink to="/" onClick={closeNavMenu}>
               {navbar ? (
                 <img src={logo} alt="logo buecherregal" />
               ) : (
@@ -50,6 +54,7 @@ const Navbar = () => {
                     }}
                     to={link.url}
                     key={link.id}
+                    onClick={closeNavMenu}
                   >
                     <li>{link.text}</li>
                   </Link>
@@ -61,7 +66,7 @@ const Navbar = () => {
                 style={{ color: "var(--bckgrnd-clr)" }}
                 href="http://buecherregal.herokuapp.com"
               >
-                Registrieren
+                Login
               </a>
             </ActionBtn>
           </NavMenu>

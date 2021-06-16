@@ -39,6 +39,7 @@ const Container = styled.div`
   @media (min-width: 800px) {
     padding: 4rem 2rem 0;
     width: 75vw;
+    margin-top: 6rem;
   }
 `
 

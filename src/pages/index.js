@@ -5,10 +5,12 @@ import HowTo from "../components/HowTo"
 import About from "../components/About"
 import Benefits from "../components/Benefits"
 import CallToAction from "../components/CallToAction"
+import Seo from "../components/Seo"
 
 const Home = () => {
   return (
     <Layout>
+      <Seo />
       <Hero />
       <HowTo />
       <Benefits />
