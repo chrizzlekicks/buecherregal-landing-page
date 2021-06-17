@@ -62,7 +62,11 @@ const AboutSection = styled.section`
   height: auto;
   display: grid;
   place-items: center;
-  padding-top: 100px;
+  padding-top: 60px;
+
+  @media (min-width: 800px) {
+    padding-top: 100px;
+  }
 `
 
 const Container = styled.div`

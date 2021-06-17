@@ -39,7 +39,6 @@ const WaveContainer = styled.svg`
   margin: 0;
   position: relative;
   display: block;
-  width: 100%;
 `
 
 const FooterContainer = styled.section`

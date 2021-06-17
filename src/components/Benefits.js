@@ -53,7 +53,6 @@ const WaveContainer = styled.svg`
   margin: 0;
   position: relative;
   display: block;
-  width: 100%;
 `
 
 const BenefitSection = styled.section`
@@ -62,7 +61,7 @@ const BenefitSection = styled.section`
   display: grid;
   place-items: center;
   background: linear-gradient(to bottom, var(--brnd-clr), var(--bckgrnd-clr));
-  padding-top: 50px;
+  padding-top: 30px;
 
   @media (min-width: 800px) {
     padding-top: 0;
