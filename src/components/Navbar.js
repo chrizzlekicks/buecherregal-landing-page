@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import logo from "../assets/images/buecherregal.svg"
-import logo_white from "../assets/images/buecherregal-weiss.svg"
+import logo from "../assets/images/kodebi_normal.svg"
+import logo_white from "../assets/images/kodebi_weiss.svg"
 import { links } from "../utils/linksDB"
 import { FaBook, FaBookOpen } from "react-icons/fa"
 
@@ -35,9 +35,9 @@ const Navbar = () => {
           <NavHeader>
             <StyledLink to="/" onClick={closeNavMenu}>
               {navbar ? (
-                <img src={logo} alt="logo buecherregal" />
+                <img src={logo} alt="logo-kodebi" />
               ) : (
-                <img src={logo_white} alt="logo_weiss buecherregal" />
+                <img src={logo_white} alt="logo_weiss-kodebi" />
               )}
             </StyledLink>
             <BookIcon onClick={() => setShowLinks(!showLinks)}>
@@ -64,7 +64,7 @@ const Navbar = () => {
             <ActionBtn>
               <a
                 style={{ color: "var(--bckgrnd-clr)" }}
-                href="http://buecherregal.herokuapp.com"
+                href="http://app.kodebi.de"
               >
                 Login
               </a>
@@ -186,7 +186,7 @@ const ActionBtn = styled.button`
 
   @media (min-width: 800px) {
     margin: 0.5rem 0;
-    padding: 0.5rem 1.25rem;
+    padding: 0.25rem 1.25rem;
   }
 `
 

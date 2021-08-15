@@ -7,9 +7,9 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Bücherregal",
+    title: "Kodebi",
     description: "Das digitale Bücherregal in Deiner Nachbarschaft.",
-    url: "https://buecherregal.netlify.app",
+    url: "https://kodebi.de",
   },
   flags: {
     DEV_SSR: false,

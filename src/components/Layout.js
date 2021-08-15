@@ -1,13 +1,11 @@
 import React from "react"
-import Navbar from "./Navbar"
-import Footer from "./Footer"
 import { createGlobalStyle } from "styled-components"
+import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
       {children}
       <Footer />
     </>

@@ -12,7 +12,7 @@ const CallToAction = () => {
         <BounceBtn>
           <a
             style={{ color: "var(--bckgrnd-clr)" }}
-            href="http://buecherregal.herokuapp.com"
+            href="http://app.kodebi.de"
           >
             Hier geht's lang
           </a>

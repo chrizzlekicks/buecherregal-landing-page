@@ -19,7 +19,7 @@ const Hero = () => {
         />
         <HeroContainer>
           <HeroText>
-            <h1>Willkommen zum Bücherregal</h1>
+            <h1>Willkommen bei Kodebi</h1>
             <h3>
               Finde neue spannende Bücher von Leuten aus deiner Nachbarschaft
             </h3>
@@ -27,7 +27,7 @@ const Hero = () => {
           <ActionBtn>
             <a
               style={{ color: "var(--bckgrnd-clr)" }}
-              href="http://buecherregal.herokuapp.com"
+              href="http://app.kodebi.de"
             >
               Jetzt registrieren
             </a>

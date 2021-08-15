@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import HowTo from "../components/HowTo"
 import About from "../components/About"
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <Layout>
       <Seo />
+      <Navbar />
       <Hero />
       <HowTo />
       <Benefits />

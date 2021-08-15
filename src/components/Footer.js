@@ -1,7 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
-import { SiNetlify } from "react-icons/si"
-import { FaHeart } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -18,12 +17,8 @@ const Footer = () => {
           ></path>
         </WaveContainer>
         <FooterContainer>
-          <p>
-            Hosted on <SiNetlify /> Netlify
-          </p>
-          <p>
-            Coded with <FaHeart /> in Münster, Berlin und München
-          </p>
+          <FooterLink to="/imprint">Impressum</FooterLink>
+          <FooterLink to="/security">Datenschutz</FooterLink>
         </FooterContainer>
       </FooterSection>
     </>
@@ -43,14 +38,18 @@ const WaveContainer = styled.svg`
 
 const FooterContainer = styled.section`
   background: var(--sm-clr);
-  height: 6rem;
+  height: 3rem;
   position: relative;
   display: grid;
   place-items: center;
 
-  p {
-    color: var(--bckgrnd-clr);
+  @media (min-width: 800px) {
+    height: 5rem;
   }
+`
+
+const FooterLink = styled(Link)`
+  color: var(--bckgrnd-clr);
 `
 
 export default Footer
