@@ -33,7 +33,7 @@ const CallToContainer = styled.section`
 `
 
 const Container = styled.div`
-  max-width: var(--mx-width);
+  max-width: var(--mx-wdth);
   padding: 2rem 1rem 0;
 
   @media (min-width: 800px) {
