@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { footer } from "../utils/linksDB"
+import { FaLinkedin, FaInstagram } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -17,8 +19,31 @@ const Footer = () => {
           ></path>
         </WaveContainer>
         <FooterContainer>
-          <FooterLink to="/imprint">Impressum</FooterLink>
-          <FooterLink to="/security">Datenschutz</FooterLink>
+          <FooterContent>
+            <FooterWrapper>
+              <p>© 2021 Kodebi. All rights reserved</p>
+              <FooterLinks>
+                {footer.map(link => (
+                  <FooterLink to={link.url} key={link.id}>
+                    {link.text}
+                  </FooterLink>
+                ))}
+              </FooterLinks>
+            </FooterWrapper>
+            <FooterSocial>
+              <a
+                style={{ color: "var(--fnt-clr" }}
+                href="https://www.instagram.com/kodebi_bookshare/"
+              >
+                <IconWrapper>
+                  <FaInstagram />
+                </IconWrapper>
+              </a>
+              <IconWrapper>
+                <FaLinkedin />
+              </IconWrapper>
+            </FooterSocial>
+          </FooterContent>
         </FooterContainer>
       </FooterSection>
     </>
@@ -38,18 +63,56 @@ const WaveContainer = styled.svg`
 
 const FooterContainer = styled.section`
   background: var(--sm-clr);
-  height: 3rem;
+  height: 6rem;
+  padding: 1rem;
   position: relative;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
-  @media (min-width: 800px) {
-    height: 5rem;
+const FooterContent = styled.article`
+  width: 100%;
+  max-width: var(--mx-wdth);
+  display: flex;
+  justify-content: space-between;
+`
+
+const FooterWrapper = styled.aside`
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+`
+
+const FooterSocial = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
+const IconWrapper = styled.span`
+  font-size: 1.5rem;
+  margin-left: 0.75rem;
+
+  &:hover {
+    color: var(--bckgrnd-clr);
+    cursor: pointer;
   }
 `
 
+const FooterLinks = styled.aside`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`
+
 const FooterLink = styled(Link)`
-  color: var(--bckgrnd-clr);
+  color: var(--fnt-clr);
+  margin-right: 1rem;
+
+  &:hover {
+    color: var(--bckgrnd-clr);
+  }
 `
 
 export default Footer

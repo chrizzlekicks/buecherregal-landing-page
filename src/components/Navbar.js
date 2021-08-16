@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import logo from "../assets/images/kodebi_normal.svg"
 import logo_white from "../assets/images/kodebi_weiss.svg"
-import { links } from "../utils/linksDB"
+import { header } from "../utils/linksDB"
 import { FaBook, FaBookOpen } from "react-icons/fa"
 
 const Navbar = () => {
@@ -46,11 +46,12 @@ const Navbar = () => {
           </NavHeader>
           <NavMenu showLinks={showLinks}>
             <LinksContainer>
-              {links.map(link => {
+              {header.map(link => {
                 return (
                   <Link
                     style={{
                       color: navbar ? "var(--fnt-clr)" : "var(--bckgrnd-clr)",
+                      padding: "0.5rem",
                     }}
                     to={link.url}
                     key={link.id}
@@ -63,7 +64,10 @@ const Navbar = () => {
             </LinksContainer>
             <ActionBtn>
               <a
-                style={{ color: "var(--bckgrnd-clr)" }}
+                style={{
+                  color: "var(--bckgrnd-clr)",
+                  padding: "0.5rem",
+                }}
                 href="http://app.kodebi.de"
               >
                 Login
@@ -136,7 +140,7 @@ const BookIcon = styled.span`
 const NavMenu = styled.div`
   text-align: start;
   font-size: 1rem;
-  height: ${props => (props.showLinks ? "7rem" : "0")};
+  height: ${props => (props.showLinks ? "11rem" : "0")};
   padding: ${props => (props.showLinks ? "0 0.5rem" : "none")};
   overflow: hidden;
   transition: var(--trnstn);
@@ -151,9 +155,9 @@ const NavMenu = styled.div`
 `
 
 const LinksContainer = styled.ul`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 
   @media (min-width: 800px) {
     flex-direction: row;
@@ -175,8 +179,7 @@ const ActionBtn = styled.button`
   border-radius: var(--brdr-rds);
   color: var(--bckgrnd-clr);
   cursor: pointer;
-  margin: 0.25rem 0;
-  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
   transition: var(--trnstn);
 
   &:hover {

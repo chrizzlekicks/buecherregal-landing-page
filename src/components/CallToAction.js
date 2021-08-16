@@ -9,14 +9,9 @@ const CallToAction = () => {
           Bist du bereit ein paar Deiner Bücher zu verleihen? Oder möchtest du
           einfach nur ein bisschen stöbern?
         </h3>
-        <BounceBtn>
-          <a
-            style={{ color: "var(--bckgrnd-clr)" }}
-            href="http://app.kodebi.de"
-          >
-            Hier geht's lang
-          </a>
-        </BounceBtn>
+        <a style={{ color: "var(--bckgrnd-clr)" }} href="http://app.kodebi.de">
+          <BounceBtn>Hier geht's lang</BounceBtn>
+        </a>
       </Container>
     </CallToContainer>
   )

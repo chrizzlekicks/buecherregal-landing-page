@@ -1,5 +1,8 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
+import "@fontsource/poppins"
+import "@fontsource/poppins/100.css"
+import "@fontsource/poppins/700.css"
 import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
@@ -13,9 +16,6 @@ const Layout = ({ children }) => {
 }
 
 const GlobalStyle = createGlobalStyle`
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
-
 :root {
     --fnt-clr: #737373;
     --fnt-sz: 0.875rem;

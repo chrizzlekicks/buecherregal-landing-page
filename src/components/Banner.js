@@ -28,7 +28,7 @@ const BannerSection = styled.section`
   margin: 0 auto;
 
   .imgWrapper {
-    height: 90px;
+    height: 40vh;
 
     @media (min-width: 800px) {
       height: 180px;

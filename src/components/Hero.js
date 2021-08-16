@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import { FaAngleDoubleDown } from "react-icons/fa"
-import { links } from "../utils/linksDB"
+import { header } from "../utils/linksDB"
 
 const Hero = () => {
   return (
@@ -24,15 +24,13 @@ const Hero = () => {
               Finde neue spannende Bücher von Leuten aus deiner Nachbarschaft
             </h3>
           </HeroText>
-          <ActionBtn>
-            <a
-              style={{ color: "var(--bckgrnd-clr)" }}
-              href="http://app.kodebi.de"
-            >
-              Jetzt registrieren
-            </a>
-          </ActionBtn>
-          <StyledLink to={links[0].url}>
+          <a
+            style={{ color: "var(--bckgrnd-clr)" }}
+            href="http://app.kodebi.de"
+          >
+            <ActionBtn>Jetzt registrieren</ActionBtn>
+          </a>
+          <StyledLink to={header[0].url}>
             <ScrollDownIcon>
               <FaAngleDoubleDown />
             </ScrollDownIcon>
