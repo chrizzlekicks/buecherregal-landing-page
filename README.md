@@ -1,4 +1,4 @@
-### Website von Kodebi Bookshare
+# Website von Kodebi Bookshare
 
 Um die Landing Page lokal zum Laufen zu bekommen müssen einige Schritte im Vorfeld befolgt werden. Zuerst sollte das Repository ordnungsgemäß im Zielordner Deiner Wahl geklont werden
 
