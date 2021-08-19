@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { footer } from "../utils/linksDB"
-import { FaLinkedin, FaInstagram } from "react-icons/fa"
+import { footerLinks, footerIcons } from "../utils/linksDB"
 
 const Footer = () => {
   return (
@@ -23,7 +22,7 @@ const Footer = () => {
             <FooterWrapper>
               <p>© 2021 Kodebi. All rights reserved</p>
               <FooterLinks>
-                {footer.map(link => (
+                {footerLinks.map(link => (
                   <FooterLink to={link.url} key={link.id}>
                     {link.text}
                   </FooterLink>
@@ -31,17 +30,13 @@ const Footer = () => {
               </FooterLinks>
             </FooterWrapper>
             <FooterSocial>
-              <a
-                style={{ color: "var(--fnt-clr" }}
-                href="https://www.instagram.com/kodebi_bookshare/"
-              >
-                <IconWrapper>
-                  <FaInstagram />
-                </IconWrapper>
-              </a>
-              <IconWrapper>
-                <FaLinkedin />
-              </IconWrapper>
+              {footerIcons.map(link => {
+                return (
+                  <IconWrapper href={link.url} key={link.id}>
+                    {link.icon}
+                  </IconWrapper>
+                )
+              })}
             </FooterSocial>
           </FooterContent>
         </FooterContainer>
@@ -89,8 +84,9 @@ const FooterSocial = styled.div`
   justify-content: flex-end;
 `
 
-const IconWrapper = styled.span`
+const IconWrapper = styled.a`
   font-size: 1.5rem;
+  color: var(--fnt-clr);
   margin-left: 0.75rem;
 
   &:hover {
