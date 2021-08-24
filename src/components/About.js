@@ -25,7 +25,7 @@ const About = () => {
       <Container>
         <Title>Unsere Vision</Title>
         <p>
-          Das Projekt "Bücherregal" ist im Rahmen von{" "}
+          Das Projekt "Kodebi" ist im Rahmen von{" "}
           <a href="https://techlabs.org">TechLabs</a> entstanden. Wir wollen
           einen barrierefreien Zugang zu Unterhaltung und Wissen schaffen und
           einen regen Austausch unter den Menschen befeuern. Aus diesem Grund

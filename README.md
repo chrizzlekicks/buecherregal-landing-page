@@ -7,7 +7,7 @@
   Kodebi Landing Page
 </h1>
 
-## Anleitung (or "How to get started")
+### Anleitung (or "How to get started")
 
 Um die Landing Page lokal zum Laufen zu bekommen müssen einige Schritte im Vorfeld befolgt werden. Zuerst sollte das Repository ordnungsgemäß im Zielordner Deiner Wahl geklont werden
 

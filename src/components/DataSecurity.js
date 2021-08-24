@@ -405,7 +405,6 @@ const Wrapper = styled.section`
 
 const Container = styled.div`
   max-width: var(--mx-wdth);
-  padding: 1rem;
   margin: 1rem auto 0;
   text-align: left;
 

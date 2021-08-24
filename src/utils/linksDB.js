@@ -10,6 +10,7 @@ const header = [
 const footerLinks = [
   { id: 1, text: "Impressum", url: "/imprint" },
   { id: 2, text: "Datenschutz", url: "/security" },
+  { id: 3, text: "FAQ", url: "/faq" },
 ]
 
 const footerIcons = [

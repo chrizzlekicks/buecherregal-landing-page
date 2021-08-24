@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     --bx-shdw: 1px 6px 6px -6px rgba(0, 0, 0, 0.75);
     --frm-shdw: 0px 4px 18px 8px rgba(0, 0, 0, 0.3);
     --lttr-spcng: 0.1rem;
-    --trnstn: all 0.3s linear;
+    --trnstn: all 0.2s ease-out;
     --nvbr-trns: 0.5s ease-in-out;
     --brdr-rds: 0.25rem;
     --brdr-rds-2: 0.75rem;
