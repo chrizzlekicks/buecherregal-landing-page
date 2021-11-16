@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const query = graphql`
   {
@@ -22,34 +23,38 @@ const About = () => {
 
   return (
     <AboutSection id="about">
-      <Container>
-        <Title>Unsere Vision</Title>
-        <p>
-          Das Projekt "Kodebi" ist im Rahmen von{" "}
-          <a href="https://techlabs.org">TechLabs</a> entstanden. Wir wollen
-          einen barrierefreien Zugang zu Unterhaltung und Wissen schaffen und
-          einen regen Austausch unter den Menschen befeuern. Aus diesem Grund
-          arbeiten wir emsig an einer digitalen Plattform, die das Verleihen von
-          Büchern vereinfachen soll.
-        </p>
-      </Container>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
+        <Container>
+          <Title>Unsere Vision</Title>
+          <p>
+            Das Projekt "Kodebi" ist im Rahmen von{" "}
+            <a href="https://techlabs.org">TechLabs</a> entstanden. Wir wollen
+            einen barrierefreien Zugang zu Unterhaltung und Wissen schaffen und
+            einen regen Austausch unter den Menschen befeuern. Aus diesem Grund
+            arbeiten wir emsig an einer digitalen Plattform, die das Verleihen
+            von Büchern vereinfachen soll.
+          </p>
+        </Container>
+      </AnimationOnScroll>
       <TeamArea>
         {nodes.map((image, index) => {
           const { name } = image
           const pathToImage = getImage(image)
           return (
-            <TeamMember key={index}>
-              <GatsbyImage
-                image={pathToImage}
-                alt={name}
-                width={200}
-                height={200}
-                imgClassName="team-img"
-              />
-              <MemberInfo>
-                <h4>{name}</h4>
-              </MemberInfo>
-            </TeamMember>
+            <AnimationOnScroll animateIn="animate__zoomIn" animateOnce>
+              <TeamMember key={index}>
+                <GatsbyImage
+                  image={pathToImage}
+                  alt={name}
+                  width={200}
+                  height={200}
+                  imgClassName="team-img"
+                />
+                <MemberInfo>
+                  <h4>{name}</h4>
+                </MemberInfo>
+              </TeamMember>
+            </AnimationOnScroll>
           )
         })}
       </TeamArea>

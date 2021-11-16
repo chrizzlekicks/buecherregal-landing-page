@@ -1,8 +1,8 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
-import "@fontsource/poppins"
-import "@fontsource/poppins/100.css"
-import "@fontsource/poppins/700.css"
+import "@fontsource/quicksand"
+import "@fontsource/quicksand/400.css"
+import "@fontsource/quicksand/700.css"
 import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
@@ -17,13 +17,13 @@ const Layout = ({ children }) => {
 
 const GlobalStyle = createGlobalStyle`
 :root {
-    --fnt-clr: #737373;
+    --fnt-clr: #260101;
     --fnt-sz: 0.875rem;
-    --bckgrnd-clr: #fff;
-    --brnd-clr: #b00055;
-    --sm-clr: #333;
+    --bckgrnd-clr: #F2EAD0;
+    --brnd-clr: #D96C75;
+    --sm-clr: #D9C6BA;
     --clr-gry: #d6d6d6;
-    --fnt-fmly: 'Poppins', sans-serif;
+    --fnt-fmly: 'Quicksand', sans-serif;
     --mn-shdw: 0 1px 5px rgba(0, 0, 0, 0.75);
     --bx-shdw: 1px 6px 6px -6px rgba(0, 0, 0, 0.75);
     --frm-shdw: 0px 4px 18px 8px rgba(0, 0, 0, 0.3);

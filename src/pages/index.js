@@ -7,6 +7,7 @@ import About from "../components/About"
 import Benefits from "../components/Benefits"
 import CallToAction from "../components/CallToAction"
 import Seo from "../components/Seo"
+import "animate.css/animate.min.css"
 
 const Home = () => {
   return (

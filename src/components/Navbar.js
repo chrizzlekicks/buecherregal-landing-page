@@ -35,9 +35,14 @@ const Navbar = () => {
           <NavHeader>
             <StyledLink to="/" onClick={closeNavMenu}>
               {navbar ? (
-                <img src={logo} alt="logo-kodebi" />
+                <img src={logo} alt="logo-kodebi" width="80" height="80" />
               ) : (
-                <img src={logo_white} alt="logo_weiss-kodebi" />
+                <img
+                  src={logo_white}
+                  alt="logo_weiss-kodebi"
+                  width="80"
+                  height="80"
+                />
               )}
             </StyledLink>
             <BookIcon onClick={() => setShowLinks(!showLinks)}>

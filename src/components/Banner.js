@@ -31,7 +31,7 @@ const BannerSection = styled.section`
     height: 40vh;
 
     @media (min-width: 800px) {
-      height: 180px;
+      height: 250px;
     }
   }
 `

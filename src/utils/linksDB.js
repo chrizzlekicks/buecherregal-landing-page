@@ -22,7 +22,7 @@ const footerIcons = [
   {
     id: 2,
     icon: <FaGithub />,
-    url: "https://github.com/chrizzlekicks/ms-wt-20-06-BuecherBoerse",
+    url: "https://github.com/chrizzlekicks/buecherregal-landing-page",
   },
 ]
 
