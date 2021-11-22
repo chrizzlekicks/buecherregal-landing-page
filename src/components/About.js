@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { AnimationOnScroll } from "react-animation-on-scroll"
 
-const query = graphql`
+const teamImageQuery = graphql`
   {
     allFile(sort: { fields: name }) {
       nodes {
@@ -18,8 +18,8 @@ const query = graphql`
 `
 
 const About = () => {
-  const data = useStaticQuery(query)
-  const nodes = data.allFile.nodes
+  const data = useStaticQuery(teamImageQuery)
+  const teamNodes = data.allFile.nodes
 
   return (
     <AboutSection id="about">
@@ -37,12 +37,12 @@ const About = () => {
         </Container>
       </AnimationOnScroll>
       <TeamArea>
-        {nodes.map((image, index) => {
+        {teamNodes.map((image, index) => {
           const { name } = image
           const pathToImage = getImage(image)
           return (
-            <AnimationOnScroll animateIn="animate__zoomIn" animateOnce>
-              <TeamMember key={index}>
+            <TeamMember key={index}>
+              <AnimationOnScroll animateIn="animate__zoomIn" animateOnce>
                 <GatsbyImage
                   image={pathToImage}
                   alt={name}
@@ -53,8 +53,8 @@ const About = () => {
                 <MemberInfo>
                   <h4>{name}</h4>
                 </MemberInfo>
-              </TeamMember>
-            </AnimationOnScroll>
+              </AnimationOnScroll>
+            </TeamMember>
           )
         })}
       </TeamArea>
@@ -70,7 +70,7 @@ const AboutSection = styled.section`
   padding-top: 60px;
 
   @media (min-width: 800px) {
-    padding-top: 100px;
+    padding-top: 120px;
   }
 `
 

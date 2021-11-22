@@ -14,9 +14,9 @@ const ImprintText = () => {
               <span>Kodebi Booksharing</span>
             </strong>
             <br />
-            Gabriel-Max-Str. 14
+            Revaler Str. 1
             <br />
-            10245 Berlin
+            10243 Berlin
           </p>
           <p>E-Mail-Adresse: info@kodebi.de</p>
           <br />

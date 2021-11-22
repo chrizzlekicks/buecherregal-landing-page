@@ -22,9 +22,9 @@ const DataSecurity = () => {
             </strong>
           </p>
           <p>
-            Gabriel-Max-Str. 14
+            Revaler Str. 1
             <br />
-            10245 Berlin
+            10243 Berlin
           </p>
           <p>
             Die verantwortliche Stelle entscheidet allein oder gemeinsam mit

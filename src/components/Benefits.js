@@ -6,70 +6,68 @@ import { AnimationOnScroll } from "react-animation-on-scroll"
 const Benefits = () => {
   return (
     <>
-      <WaveContainer xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#D96C75"
-          fillOpacity="1"
-          d="M0,64L60,80C120,96,240,128,360,149.3C480,171,600,181,720,154.7C840,128,960,64,1080,64C1200,64,1320,128,1380,160L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-        ></path>
-      </WaveContainer>
       <BenefitSection id="benefits">
-        <GridContainer>
-          <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
-            <Article>
-              <h2>
-                Bereichere andere um Dich herum. Biete Deine alten Staubfänger
-                zum Verleih an.
-              </h2>
-              <BenefitContainer>
-                <GridItem>
-                  <CircledNumber>1</CircledNumber>
-                  <BenefitText>
-                    Schnell und einfach Bücher hochladen
-                  </BenefitText>
-                </GridItem>
-                <GridItem>
-                  <CircledNumber>2</CircledNumber>
-                  <BenefitText>
-                    Neugierde in Deiner Umgebung streuen
-                  </BenefitText>
-                </GridItem>
-                <GridItem>
-                  <CircledNumber>3</CircledNumber>
-                  <BenefitText>
-                    Mache anderen Leseratten eine große Freude.
-                  </BenefitText>
-                </GridItem>
-              </BenefitContainer>
-            </Article>
-          </AnimationOnScroll>
-          <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce>
-            <StaticImage
-              src="../assets/images/undraw_Reading_re_29f8.svg"
-              alt="Reading"
-              placeholder="tracedSVG"
-              className="reading-svg"
-              as="article"
-            />
-          </AnimationOnScroll>
-        </GridContainer>
+        <WaveContainer
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#D96C75"
+            fillOpacity="1"
+            d="M0,64L60,80C120,96,240,128,360,149.3C480,171,600,181,720,154.7C840,128,960,64,1080,64C1200,64,1320,128,1380,160L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </WaveContainer>
+        <WrapContainer>
+          <GridContainer>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
+              <Article>
+                <h2>
+                  Bereichere andere um Dich herum. Biete Deine alten Staubfänger
+                  zum Verleih an.
+                </h2>
+                <BenefitContainer>
+                  <GridItem>
+                    <CircledNumber>1</CircledNumber>
+                    <BenefitText>
+                      Schnell und einfach Bücher hochladen
+                    </BenefitText>
+                  </GridItem>
+                  <GridItem>
+                    <CircledNumber>2</CircledNumber>
+                    <BenefitText>
+                      Neugierde in Deiner Umgebung streuen
+                    </BenefitText>
+                  </GridItem>
+                  <GridItem>
+                    <CircledNumber>3</CircledNumber>
+                    <BenefitText>
+                      Mache anderen Leseratten eine große Freude.
+                    </BenefitText>
+                  </GridItem>
+                </BenefitContainer>
+              </Article>
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce>
+              <StaticImage
+                src="../assets/images/undraw_Reading_re_29f8.svg"
+                alt="Reading"
+                placeholder="tracedSVG"
+                className="reading-svg"
+                as="article"
+              />
+            </AnimationOnScroll>
+          </GridContainer>
+        </WrapContainer>
       </BenefitSection>
     </>
   )
 }
-
-const WaveContainer = styled.svg`
-  margin: 0;
-  position: relative;
-  display: block;
-`
 
 const BenefitSection = styled.section`
   width: 100%;
   height: auto;
   display: grid;
   place-items: center;
-  background: linear-gradient(to bottom, var(--brnd-clr), var(--bckgrnd-clr));
   padding-top: 30px;
 
   @media (min-width: 800px) {
@@ -77,8 +75,20 @@ const BenefitSection = styled.section`
   }
 `
 
-const GridContainer = styled.div`
+const WaveContainer = styled.svg`
+  margin: 0;
+  position: relative;
+  display: block;
+`
+
+const WrapContainer = styled.div`
   width: 100%;
+  background: linear-gradient(to bottom, var(--brnd-clr), var(--bckgrnd-clr));
+  display: flex;
+  justify-content: center;
+`
+
+const GridContainer = styled.div`
   max-width: var(--mx-wdth);
   margin-bottom: 4rem;
 

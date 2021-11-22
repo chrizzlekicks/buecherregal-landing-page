@@ -5,7 +5,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll"
 const CallToAction = () => {
   return (
     <CallToContainer>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce delay="1000">
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce delay={500}>
         <Container>
           <h3>
             Bist du bereit ein paar Deiner Bücher zu verleihen? Oder möchtest du

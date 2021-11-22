@@ -71,7 +71,6 @@ const Navbar = () => {
               <a
                 style={{
                   color: "var(--bckgrnd-clr)",
-                  padding: "0.5rem",
                 }}
                 href="http://app.kodebi.de"
               >

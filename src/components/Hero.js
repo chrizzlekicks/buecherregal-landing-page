@@ -65,7 +65,7 @@ const HeroContainer = styled.div`
 
 const HeroText = styled.div`
   text-align: center;
-  color: #fff;
+  color: var(--bckgrnd-clr);
   margin-bottom: 1rem;
 `
 
