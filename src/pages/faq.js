@@ -6,7 +6,7 @@ import ReturnTo from "../components/ReturnTo"
 import FaqTab from "../components/FaqTab"
 import { faqDB } from "../utils/faqDB"
 
-const faq = () => {
+const Faq = () => {
   return (
     <>
       <Layout>
@@ -30,4 +30,4 @@ const Container = styled.section`
   }
 `
 
-export default faq
+export default Faq
