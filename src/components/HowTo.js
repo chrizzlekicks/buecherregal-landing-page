@@ -1,42 +1,45 @@
 import React from "react"
 import styled from "styled-components"
 import { FaSearch, FaComments, FaBookReader } from "react-icons/fa"
-import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const HowTo = () => {
   return (
     <HowToSection id="howto">
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
-        <Container>
-          <h2>Schmökern in fremden Regalen leicht gemacht</h2>
-          <p>
-            Finde kostenlos Bücher in Deiner Umgebung und teile Wissen mit
-            Leuten aus Deiner Hood!
-          </p>
-        </Container>
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
-        <FlexContainer>
-          <FlexItem>
-            <IconContainer>
-              <FaSearch />
-            </IconContainer>
-            <h3>Finde Dein neues Lieblingsbuch</h3>
-          </FlexItem>
-          <FlexItem>
-            <IconContainer>
-              <FaComments />
-            </IconContainer>
-            <h3>Leihe es Dir von dem/der Besitzer*in</h3>
-          </FlexItem>
-          <FlexItem>
-            <IconContainer>
-              <FaBookReader />
-            </IconContainer>
-            <h3>Mache es Dir gemütlich!</h3>
-          </FlexItem>
-        </FlexContainer>
-      </AnimationOnScroll>
+      <Container data-sal="slide-up" data-sal-easing="ease">
+        <h2>Schmökern in fremden Regalen leicht gemacht</h2>
+        <p>
+          Finde kostenlos Bücher in Deiner Umgebung und teile Wissen mit Leuten
+          aus Deiner Hood!
+        </p>
+      </Container>
+      <FlexContainer>
+        <FlexItem data-sal="zoom-in" data-sal-easing="ease">
+          <IconContainer>
+            <FaSearch />
+          </IconContainer>
+          <h3>Finde Dein neues Lieblingsbuch</h3>
+        </FlexItem>
+        <FlexItem
+          data-sal="zoom-in"
+          data-sal-easing="ease"
+          data-sal-delay="300"
+        >
+          <IconContainer>
+            <FaComments />
+          </IconContainer>
+          <h3>Leihe es Dir von dem/der Besitzer*in</h3>
+        </FlexItem>
+        <FlexItem
+          data-sal="zoom-in"
+          data-sal-easing="ease"
+          data-sal-delay="600"
+        >
+          <IconContainer>
+            <FaBookReader />
+          </IconContainer>
+          <h3>Mache es Dir gemütlich!</h3>
+        </FlexItem>
+      </FlexContainer>
     </HowToSection>
   )
 }

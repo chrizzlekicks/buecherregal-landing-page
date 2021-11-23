@@ -1,24 +1,22 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const CallToAction = () => {
   return (
     <CallToContainer>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce delay={500}>
-        <Container>
-          <h3>
-            Bist du bereit ein paar Deiner Bücher zu verleihen? Oder möchtest du
-            einfach nur ein bisschen stöbern?
-          </h3>
-          <a
-            style={{ color: "var(--bckgrnd-clr)" }}
-            href="http://app.kodebi.de"
-          >
-            <BounceBtn>Hier geht's lang</BounceBtn>
-          </a>
-        </Container>
-      </AnimationOnScroll>
+      <Container
+        data-sal="slide-up"
+        data-sal-delay="500"
+        data-sal-easing="ease"
+      >
+        <h3>
+          Bist du bereit ein paar Deiner Bücher zu verleihen? Oder möchtest du
+          einfach nur ein bisschen stöbern?
+        </h3>
+        <a style={{ color: "var(--bckgrnd-clr)" }} href="http://app.kodebi.de">
+          <BounceBtn>Hier geht's lang</BounceBtn>
+        </a>
+      </Container>
     </CallToContainer>
   )
 }

@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const teamImageQuery = graphql`
   {
@@ -23,37 +22,38 @@ const About = () => {
 
   return (
     <AboutSection id="about">
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
-        <Container>
-          <Title>Unsere Vision</Title>
-          <p>
-            Das Projekt "Kodebi" ist im Rahmen von{" "}
-            <a href="https://techlabs.org">TechLabs</a> entstanden. Wir wollen
-            einen barrierefreien Zugang zu Unterhaltung und Wissen schaffen und
-            einen regen Austausch unter den Menschen befeuern. Aus diesem Grund
-            arbeiten wir emsig an einer digitalen Plattform, die das Verleihen
-            von Büchern vereinfachen soll.
-          </p>
-        </Container>
-      </AnimationOnScroll>
+      <Container data-sal="slide-up" data-sal-easing="ease">
+        <Title>Unsere Vision</Title>
+        <p>
+          Das Projekt "Kodebi" ist im Rahmen von{" "}
+          <a href="https://techlabs.org">TechLabs</a> entstanden. Wir wollen
+          einen barrierefreien Zugang zu Unterhaltung und Wissen schaffen und
+          einen regen Austausch unter den Menschen befeuern. Aus diesem Grund
+          arbeiten wir emsig an einer digitalen Plattform, die das Verleihen von
+          Büchern vereinfachen soll.
+        </p>
+      </Container>
       <TeamArea>
         {teamNodes.map((image, index) => {
           const { name } = image
           const pathToImage = getImage(image)
           return (
-            <TeamMember key={index}>
-              <AnimationOnScroll animateIn="animate__zoomIn" animateOnce>
-                <GatsbyImage
-                  image={pathToImage}
-                  alt={name}
-                  width={200}
-                  height={200}
-                  imgClassName="team-img"
-                />
-                <MemberInfo>
-                  <h4>{name}</h4>
-                </MemberInfo>
-              </AnimationOnScroll>
+            <TeamMember
+              key={index}
+              data-sal="zoom-in"
+              data-sal-easing="ease"
+              data-sal-delay="300"
+            >
+              <GatsbyImage
+                image={pathToImage}
+                alt={name}
+                width={200}
+                height={200}
+                imgClassName="team-img"
+              />
+              <MemberInfo>
+                <h4>{name}</h4>
+              </MemberInfo>
             </TeamMember>
           )
         })}

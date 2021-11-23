@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const Benefits = () => {
   return (
@@ -19,35 +18,33 @@ const Benefits = () => {
         </WaveContainer>
         <WrapContainer>
           <GridContainer>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
-              <Article>
-                <h2>
-                  Bereichere andere um Dich herum. Biete Deine alten Staubfänger
-                  zum Verleih an.
-                </h2>
-                <BenefitContainer>
-                  <GridItem>
-                    <CircledNumber>1</CircledNumber>
-                    <BenefitText>
-                      Schnell und einfach Bücher hochladen
-                    </BenefitText>
-                  </GridItem>
-                  <GridItem>
-                    <CircledNumber>2</CircledNumber>
-                    <BenefitText>
-                      Neugierde in Deiner Umgebung streuen
-                    </BenefitText>
-                  </GridItem>
-                  <GridItem>
-                    <CircledNumber>3</CircledNumber>
-                    <BenefitText>
-                      Mache anderen Leseratten eine große Freude.
-                    </BenefitText>
-                  </GridItem>
-                </BenefitContainer>
-              </Article>
-            </AnimationOnScroll>
-            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce>
+            <Article data-sal="slide-right" data-sal-easing="ease">
+              <h2>
+                Bereichere andere um Dich herum. Biete Deine alten Staubfänger
+                zum Verleih an.""
+              </h2>
+              <BenefitContainer>
+                <GridItem>
+                  <CircledNumber>1</CircledNumber>
+                  <BenefitText>
+                    Schnell und einfach Bücher hochladen
+                  </BenefitText>
+                </GridItem>
+                <GridItem>
+                  <CircledNumber>2</CircledNumber>
+                  <BenefitText>
+                    Neugierde in Deiner Umgebung streuen
+                  </BenefitText>
+                </GridItem>
+                <GridItem>
+                  <CircledNumber>3</CircledNumber>
+                  <BenefitText>
+                    Mache anderen Leseratten eine große Freude.
+                  </BenefitText>
+                </GridItem>
+              </BenefitContainer>
+            </Article>
+            <Article data-sal="slide-left" data-sal-easing="ease">
               <StaticImage
                 src="../assets/images/undraw_Reading_re_29f8.svg"
                 alt="Reading"
@@ -55,7 +52,7 @@ const Benefits = () => {
                 className="reading-svg"
                 as="article"
               />
-            </AnimationOnScroll>
+            </Article>
           </GridContainer>
         </WrapContainer>
       </BenefitSection>
